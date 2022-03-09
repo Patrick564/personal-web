@@ -1,0 +1,17 @@
+.container {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  background-color: #eef2ff;
+}
+
+.more {
+  margin-top: 35px;
+  color: #6366f1;
+  text-decoration: none;
+}
