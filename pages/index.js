@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import About from '../components/About.js'
 import Contact from '../components/Contact.js'
 import Presentation from '../components/Presentation.js'
