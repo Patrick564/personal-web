@@ -6,5 +6,40 @@
   justify-content: center;
   flex-direction: column;
   display: flex;
-  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(99,102,241,1) 0%, rgba(50,156,248,1) 67%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(99,102,241,1) 0%, rgba(50,156,248,1) 67%, rgba(0,212,255,1) 100%);
+  gap: 50px;
+}
+
+.title {
+  color: white;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (min-width: 769px) {
+  .contactContainer {
+    flex-direction: row;
+  }
+}
+
+.contactOption {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  text-decoration: none;
+  width: 230px;
+  background: white;
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  transition: transform 0.15s ease-in-out;
+}
+
+.contactOption:hover {
+  transform: scale(1.125);
 }

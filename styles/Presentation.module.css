@@ -18,9 +18,10 @@
   padding: 10px;
   border-radius: 10px;
   outline: none;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .more:hover {
-  transform: scale(1.05);
+  transform: scale(1.09);
+  box-shadow: 0 5px;
 }
