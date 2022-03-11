@@ -10,6 +10,19 @@
   background-color: #eef2ff;
 }
 
+.title {
+  /* display: table-caption; */
+  text-align: center;
+  /* text-transform: uppercase; */
+}
+
+@media (max-width: 425px) {
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .more {
   margin-top: 35px;
   color: #6366f1;

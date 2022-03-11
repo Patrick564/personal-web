@@ -32,15 +32,29 @@
   }
 }
 
+/* @keyframes appear {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
+
 .project {
   border-radius: 10px;
   padding: 20px;
   display: flex;
+  margin: 0 5px;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 27px;
   background-color: white;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
+  /* animation: 1s ease-in-out 0s appear; */
 }
 
 .project:last-child {
@@ -59,16 +73,19 @@
 
 .projectExplanation {
   max-width: 500px;
+  text-align: justify;
 }
 
 .used {
   font-weight: bold;
+  /* text-align: center; */
 }
 
 .used > p {
   margin-top: 10px;
   /* font-weight: 500; */
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .links {

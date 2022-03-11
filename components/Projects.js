@@ -18,7 +18,7 @@ const Projects = () => {
           <Image className={style.projectImg} src={planetariumSs} width={'500px'} height={'250px'} />
 
           <p className={style.projectExplanation}>
-            This page consume the NASA API, use images and descriptions for A Picture Of the Day
+            This page displays images and descriptions from A Picture Of the Day
             and Mars Rover ordening and separating the images by their different cameras. Hosted in Vercel.
           </p>
 
