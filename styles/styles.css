@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .wrapper {
