@@ -4,11 +4,10 @@ const Document = () => {
   return (
     <Html>
       <Head>
-        <meta name="image" property="og:image" content="/portrait.png" />
+        <meta lang='en' translate='false' />
+        <meta name="image" property="og:image" content="/portrait.webp" />
         <meta name="author" content="Patrick Vilchez" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet" />
+        <meta name="description" content="A page to present my information, projects and contact data." />
         <link rel="icon" href="/ellipsis.svg" />
       </Head>
 

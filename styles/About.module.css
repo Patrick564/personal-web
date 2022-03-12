@@ -1,7 +1,6 @@
 .about {
   align-items: center;
   background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(99,102,241,1) 0%, rgba(50,156,248,1) 78%, rgba(0,212,255,1) 100%);
-  /* background-color: #6366f1; */
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -33,6 +32,7 @@
   border-radius: 10px;
   outline: none;
   transition: transform 0.15s ease-in-out, box-shadow 0.15s linear;
+  font-weight: bold;
 }
 
 .download:hover {

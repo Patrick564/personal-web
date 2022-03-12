@@ -43,3 +43,7 @@
 .contactOption:hover {
   transform: scale(1.125);
 }
+
+.contactOption:visited {
+  color: black;
+}

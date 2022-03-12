@@ -1,14 +1,21 @@
+import useTranslation from 'next-translate/useTranslation'
 import style from '../styles/Presentation.module.css'
 
 const Presentation = () => {
+  const { t } = useTranslation('presentation')
+
   return (
     <div className={style.container} id='presentation'>
       <h1 className={style.title}>
-        <span>Hi, I'm </span>
-        <span>Patrick Vilchez</span>
+        <span>{t('titleOne')}</span>
+        <span>{t('titleTwo')}</span>
       </h1>
-      <span>Backend/Frontend Web Developer</span>
-      <a className={style.more} href='#about'>More</a>
+
+      <span>{t('subtitle')}</span>
+
+      <a className={style.more} href='#about'>
+        {t('button')}
+      </a>
     </div>
   )
 }

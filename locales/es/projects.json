@@ -1,0 +1,9 @@
+{
+  "title": "Proyectos",
+  "usedSubtitle": "Tecnologías usadas",
+  "toPage": "A la página",
+  "toRepo": "Repositorio",
+  "planetariumExplanation": "Esta página muestra imágenes y descripciones de A Picture Of the Day y Mars Rover ordenando y separando las imágenes por sus diferentes cámaras. Hosteada en Vercel.",
+  "chatRoomExplanation": "Una página creada con un cliente (hosteado en Vercel) y un servidor (hosteado en Heroku) para iniciar sesión con nombre de usuario y chatear en tiempo real usando Socket.io.",
+  "contactsCalendarExplanation": "Una página creada para iniciar sesión (con usuario y contraseña) y guardar la información de sus contactos (nombre, cumpleaños, número de teléfono y correo) en una base de datos. Hosteada en Heroku."
+}

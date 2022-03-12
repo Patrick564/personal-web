@@ -1,0 +1,10 @@
+{
+  "presentation": {
+    "title": {
+      "partOne": "¡Hola, soy ",
+      "partTwo": "Patrick Vilchez!"
+    },
+    "subtitle": "Desarrollador Web Backend/Frontend",
+    "button": "Más información"
+  }
+}
