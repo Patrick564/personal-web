@@ -1,5 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons'
+
 const Document = () => {
   return (
     <Html>

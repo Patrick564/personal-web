@@ -1,7 +1,27 @@
-import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
-
 import style from '../styles/Contact.module.css'
+
+import useTranslation from 'next-translate/useTranslation'
+import { faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+
+import ContactCard from './ContactCard'
+
+const CONTACT_OPTIONS = {
+  telegram: {
+    link: 'https://t.me/pod794',
+    icon: faTelegram,
+    text: 't.me/pod794',
+  },
+  linkedin: {
+    link: 'https://linkedin.com/in/patrick-vilchez/',
+    icon: faLinkedin,
+    text: 'linkedin.com/in/patrick-vilchez',
+  },
+  github: {
+    link: 'https://github.com/Patrick564',
+    icon: faGithub,
+    text: 'github.com/Patrick564',
+  }
+}
 
 const Contact = () => {
   const { t } = useTranslation('contact')
@@ -11,20 +31,19 @@ const Contact = () => {
       <h2 className={style.title}>{t('title')}</h2>
 
       <div className={style.contactContainer}>
-        <a className={style.contactOption} href='https://t.me/pod794' target='_blank'>
-          <Image src='/telegram-brands.svg' width='48' height='48' alt='Telegram logo' />
-          t.me/pod794
-        </a>
-
-        <a className={style.contactOption} href='https://www.linkedin.com/in/patrick-vilchez/' target='_blank'>
-          <Image src='/linkedin-brands.svg' width='48' height='48' alt='Linkedin logo' />
-          linkedin.com/in/patrick-vilchez
-        </a>
-
-        <a className={style.contactOption} href='https://github.com/Patrick564' target='_blank'>
-          <Image src='/github-brands.svg' width='48' height='48' alt='Github logo' />
-          github.com/Patrick564
-        </a>
+        {Object.keys(CONTACT_OPTIONS).map((option) => {
+          let { link, icon, text } = CONTACT_OPTIONS[option]
+          return (
+            <ContactCard
+            key={option}
+            link={link}
+            icon={icon}
+            text={text}
+            cardStyle={style.contactOption}
+            iconStyle={style.contactIcon}
+            />
+            )
+        })}
       </div>
     </div>
   )
