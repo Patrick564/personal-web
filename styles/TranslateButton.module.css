@@ -23,7 +23,9 @@
   width: 65px;
 }
 
-.img {
+.icon {
   display: block;
+  color: black;
+  width: 48px;
   height: 40px;
 }

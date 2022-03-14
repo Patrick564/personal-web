@@ -11,7 +11,7 @@ const Presentation = () => {
         <span>{t('titleTwo')}</span>
       </h1>
 
-      <span>{t('subtitle')}</span>
+      <h3>{t('subtitle')}</h3>
 
       <a className={style.more} href='#about'>
         {t('button')}

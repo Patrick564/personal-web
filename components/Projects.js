@@ -14,13 +14,15 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Planetarium (NASA API)</h3>
 
-          <Image
-            className={style.projectImg}
-            src='/planetarium.webp'
-            width='400'
-            height='225'
-            alt='Planetarium project'
-          />
+          {/* <div style={{ width: '250px', height: '225px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
+            <Image
+              className={style.projectImg}
+              src='/planetarium.png'
+              width={500}
+              height={250}
+              alt='Planetarium project'
+            />
+          {/* </div> */}
 
           <p className={style.projectExplanation}>
             {t('planetariumExplanation')}
@@ -44,13 +46,15 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Chat Room (Client)</h3>
 
-          <Image
+          {/* <div style={{ width: '250px', height: '225px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
+            <Image
             className={style.projectImg}
-            src='/chat-room.webp'
-            width='400'
-            height='225'
+            src='/chat-room.png'
+            width={500}
+            height={250}
             alt='Chat Room project'
           />
+          {/* </div> */}
 
           <p className={style.projectExplanation}>
             {t('chatRoomExplanation')}
@@ -74,14 +78,16 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Contacts Calendar</h3>
 
-          <Image
+          {/* <div style={{ width: '250px', height: '250px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
+            <Image
             className={style.projectImg}
-            src='/contacts-calendar.webp'
-            width='400'
-            height='225'
+            src='/contacts-calendar.png'
+            width={500}
+            height={250}
             alt="Contacts Calendar project"
             priority
           />
+          {/* </div> */}
 
           <p className={style.projectExplanation}>
             {t('contactsCalendarExplanation')}

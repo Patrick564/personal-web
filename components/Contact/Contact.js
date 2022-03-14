@@ -1,4 +1,4 @@
-import style from '../styles/Contact.module.css'
+import style from '../../styles/Contact.module.css'
 
 import useTranslation from 'next-translate/useTranslation'
 import { faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -42,7 +42,7 @@ const Contact = () => {
             cardStyle={style.contactOption}
             iconStyle={style.contactIcon}
             />
-            )
+          )
         })}
       </div>
     </div>
