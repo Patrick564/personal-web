@@ -13,7 +13,7 @@ const About = () => {
       <p className={style.explanation}>
         {t('explanationTwo')}
       </p>
-      <a className={style.download} href='https://drive.google.com/file/d/1JrJtZ61TluUh6ngVpU8JI0Oa-uNcKYFG/view?usp=sharing' target='_blank'>
+      <a className={style.download} href={t('resumeLink')} target='_blank'>
         {t('button')}
       </a>
     </div>

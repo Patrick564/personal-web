@@ -14,15 +14,13 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Planetarium (NASA API)</h3>
 
-          {/* <div style={{ width: '250px', height: '225px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
-            <Image
-              className={style.projectImg}
-              src='/planetarium.png'
-              width={500}
-              height={250}
-              alt='Planetarium project'
-            />
-          {/* </div> */}
+          <Image
+            className={style.projectImg}
+            src='/planetarium.png'
+            width={500}
+            height={250}
+            alt='Planetarium project'
+          />
 
           <p className={style.projectExplanation}>
             {t('planetariumExplanation')}
@@ -46,15 +44,13 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Chat Room (Client)</h3>
 
-          {/* <div style={{ width: '250px', height: '225px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
-            <Image
+          <Image
             className={style.projectImg}
             src='/chat-room.png'
             width={500}
             height={250}
             alt='Chat Room project'
           />
-          {/* </div> */}
 
           <p className={style.projectExplanation}>
             {t('chatRoomExplanation')}
@@ -78,8 +74,7 @@ const Projects = () => {
         <div className={style.project}>
           <h3>Contacts Calendar</h3>
 
-          {/* <div style={{ width: '250px', height: '250px', borderRadius: '10px', display: 'block', margin: 'auto' }}> */}
-            <Image
+          <Image
             className={style.projectImg}
             src='/contacts-calendar.png'
             width={500}
@@ -87,7 +82,6 @@ const Projects = () => {
             alt="Contacts Calendar project"
             priority
           />
-          {/* </div> */}
 
           <p className={style.projectExplanation}>
             {t('contactsCalendarExplanation')}
