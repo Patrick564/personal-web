@@ -1,4 +1,4 @@
-import style from '../../styles/Contact.module.css'
+import style from './Contact.module.css'
 
 import useTranslation from 'next-translate/useTranslation'
 import { faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -27,7 +27,7 @@ const Contact = () => {
   const { t } = useTranslation('contact')
 
   return (
-    <div className={style.contact}>
+    <div className={style.contact} id='contact'>
       <h2 className={style.title}>{t('title')}</h2>
 
       <div className={style.contactContainer}>
