@@ -1,109 +1,91 @@
+import { useState } from 'react'
+
 import useTranslation from 'next-translate/useTranslation'
-import Image from 'next/image'
+
+import ProjectCard from './Projects/ProjectCard'
 
 import style from '../styles/Projects.module.css'
 
+const projects = {
+  planetarium: {
+    name: 'Planetarium (NASA API)',
+    explanation: 'planetariumExplanation',
+    image: '/planetarium.webp',
+    page: 'https://planetarium-nasa-api.vercel.app',
+    repo: 'https://github.com/Patrick564/planetarium-nasa-api'
+  },
+  chatRoom: {
+    name: 'Chat Room (Client)',
+    explanation: 'chatRoomExplanation',
+    image: '/chat-room-client.webp',
+    page: 'https://chat-room-client-psi.vercel.app',
+    repo: 'https://github.com/Patrick564/chat-room-client'
+  },
+  contactsCalendar: {
+    name: 'Contacts Calendar',
+    explanation: 'contactsCalendarExplanation',
+    image: '/contacts-calendar.webp',
+    page: 'https://contacts-calendar.onrender.com',
+    repo: 'https://github.com/Patrick564/contacts_calendar'
+  },
+  photoGallery: {
+    name: 'Photo Gallery (AWS-S3)',
+    explanation: 'photoGalleryExplanation',
+    image: '/photo-gallery.webp',
+    page: 'https://aws-photo-gallery.netlify.app',
+    repo: 'https://github.com/Patrick564/photo-gallery'
+  },
+  pokeApp: {
+    name: 'Poke App (Client)',
+    explanation: 'pokeAppExplanation',
+    image: '/poke-app-client.webp',
+    page: 'https://expo.dev/@patrick794/poke-app-client',
+    repo: 'https://github.com/Patrick564/poke-app-client'
+  }
+}
+
 const Projects = () => {
   const { t } = useTranslation('projects')
+  const [showMore, setShowMore] = useState(false)
 
   return (
     <div className={style.projects} id='projects'>
       <h2 className={style.title}>{t('title')}</h2>
 
       <div className={style.container}>
-        <div className={style.project}>
-          <h3>Planetarium (NASA API)</h3>
-
-          <Image
-            className={style.projectImg}
-            src='/planetarium.png'
-            width={500}
-            height={250}
-            alt='Planetarium project'
-          />
-
-          <p className={style.projectExplanation}>
-            {t('planetariumExplanation')}
-          </p>
-
-          <div className={style.used}>
-            <h4>{t('usedSubtitle')}</h4>
-            <p>JavaScript | React | Styled-Components | Docker</p>
-          </div>
-
-          <div className={style.links}>
-            <a className={style.link} href='https://planetarium-nasa-api.vercel.app' target='_blank'>
-              {t('toPage')}
-            </a>
-            <a className={style.link} href='https://github.com/Patrick564/planetarium-nasa-api' target='_blank'>
-              {t('toRepo')}
-            </a>
-          </div>
-        </div>
-
-        <div className={style.project}>
-          <h3>Chat Room (Client)</h3>
-
-          <Image
-            className={style.projectImg}
-            src='/chat-room.png'
-            width={500}
-            height={250}
-            alt='Chat Room project'
-          />
-
-          <p className={style.projectExplanation}>
-            {t('chatRoomExplanation')}
-          </p>
-
-          <div className={style.used}>
-            <h4>{t('usedSubtitle')}</h4>
-            <p>JavaScript | React | Styled-Components | Socket.io</p>
-          </div>
-
-          <div className={style.links}>
-            <a className={style.link} href='https://chat-room-client-psi.vercel.app' target='_blank'>
-              {t('toPage')}
-            </a>
-            <a className={style.link} href='https://github.com/Patrick564/chat-room-client' target='_blank'>
-              {t('toRepo')}
-            </a>
-          </div>
-        </div>
-
-        <div className={style.project}>
-          <h3>Contacts Calendar</h3>
-
-          <Image
-            className={style.projectImg}
-            src='/contacts-calendar.png'
-            width={500}
-            height={250}
-            alt="Contacts Calendar project"
-            priority
-          />
-
-          <p className={style.projectExplanation}>
-            {t('contactsCalendarExplanation')}
-          </p>
-
-          <div className={style.used}>
-            <h4>{t('usedSubtitle')}</h4>
-            <p>Django | TailwindCSS | JavaScript | SendGrid</p>
-          </div>
-
-          <div className={style.links}>
-            <a className={style.link} href='https://contacts-calendar.herokuapp.com' target='_blank'>
-              {t('toPage')}
-            </a>
-            <a className={style.link} href='https://github.com/Patrick564/contacts_calendar' target='_blank'>
-              {t('toRepo')}
-            </a>
-          </div>
-        </div>
+        {
+          Object.keys(projects).map((project, idx) => {
+            if (idx > 2) {
+              return (
+                <ProjectCard
+                  explanation={t(projects[project]['explanation'])}
+                  page={t('toPage')}
+                  repo={t('toRepo')}
+                  subtitle={'usedSubtitle'}
+                  image={projects[project]['image']}
+                  title={projects[project]['name']}
+                  visible={showMore}
+                  key={idx}
+                />
+              )
+            }
+            return (
+              <ProjectCard
+                explanation={t(projects[project]['explanation'])}
+                page={t('toPage')}
+                repo={t('toRepo')}
+                subtitle={'usedSubtitle'}
+                image={projects[project]['image']}
+                title={projects[project]['name']}
+                visible={true}
+                key={idx}
+              />
+            )
+          })
+        }
       </div>
 
-      {/* <button type='button'>Show more</button> */}
+      <button type='button' onClick={() => setShowMore(!showMore)}>Show more</button>
     </div>
   )
 }
