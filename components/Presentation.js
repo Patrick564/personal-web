@@ -1,6 +1,9 @@
 import useTranslation from 'next-translate/useTranslation'
 import style from '../styles/Presentation.module.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+
 const Presentation = () => {
   const { t } = useTranslation('presentation')
 
@@ -14,7 +17,7 @@ const Presentation = () => {
       <h3>{t('subtitle')}</h3>
 
       <a className={style.more} href='#about'>
-        {t('button')}
+        <FontAwesomeIcon size='2x' icon={faArrowDown} className='fa-bounce' />
       </a>
     </div>
   )

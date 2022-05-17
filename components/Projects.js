@@ -3,44 +3,50 @@ import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 import ProjectCard from './Projects/ProjectCard'
+import PrimaryButton from './Buttons/Primary/PrimaryButton'
 
 import style from '../styles/Projects.module.css'
 
 const projects = {
   planetarium: {
     name: 'Planetarium (NASA API)',
-    explanation: 'planetariumExplanation',
     image: '/planetarium.webp',
-    page: 'https://planetarium-nasa-api.vercel.app',
-    repo: 'https://github.com/Patrick564/planetarium-nasa-api'
+    explanation: 'planetariumExplanation',
+    technologies: 'JavaScript | React | Styled-Components | Docker',
+    pageLink: 'https://planetarium-nasa-api.vercel.app',
+    repoLink: 'https://github.com/Patrick564/planetarium-nasa-api'
   },
   chatRoom: {
     name: 'Chat Room (Client)',
-    explanation: 'chatRoomExplanation',
     image: '/chat-room-client.webp',
-    page: 'https://chat-room-client-psi.vercel.app',
-    repo: 'https://github.com/Patrick564/chat-room-client'
+    explanation: 'chatRoomExplanation',
+    technologies: 'JavaScript | React | Styled-Components | Socket.io',
+    pageLink: 'https://chat-room-client-psi.vercel.app',
+    repoLink: 'https://github.com/Patrick564/chat-room-client'
   },
   contactsCalendar: {
     name: 'Contacts Calendar',
-    explanation: 'contactsCalendarExplanation',
     image: '/contacts-calendar.webp',
-    page: 'https://contacts-calendar.onrender.com',
-    repo: 'https://github.com/Patrick564/contacts_calendar'
+    explanation: 'contactsCalendarExplanation',
+    technologies: 'Django | Tailwind CSS | PostgreSQL | Docker',
+    pageLink: 'https://contacts-calendar.onrender.com',
+    repoLink: 'https://github.com/Patrick564/contacts_calendar'
   },
   photoGallery: {
     name: 'Photo Gallery (AWS-S3)',
-    explanation: 'photoGalleryExplanation',
     image: '/photo-gallery.webp',
-    page: 'https://aws-photo-gallery.netlify.app',
-    repo: 'https://github.com/Patrick564/photo-gallery'
+    explanation: 'photoGalleryExplanation',
+    technologies: 'Astro | React | Tailwind CSS',
+    pageLink: 'https://aws-photo-gallery.netlify.app',
+    repoLink: 'https://github.com/Patrick564/photo-gallery'
   },
   pokeApp: {
     name: 'Poke App (Client)',
+    image: '/poke-app-client.svg',
     explanation: 'pokeAppExplanation',
-    image: '/poke-app-client.webp',
-    page: 'https://expo.dev/@patrick794/poke-app-client',
-    repo: 'https://github.com/Patrick564/poke-app-client'
+    technologies: 'Fastify | React Native | Expo | MongoDB',
+    pageLink: 'https://expo.dev/@patrick794/poke-app-client',
+    repoLink: 'https://github.com/Patrick564/poke-app-client'
   }
 }
 
@@ -54,38 +60,29 @@ const Projects = () => {
 
       <div className={style.container}>
         {
-          Object.keys(projects).map((project, idx) => {
-            if (idx > 2) {
-              return (
-                <ProjectCard
-                  explanation={t(projects[project]['explanation'])}
-                  page={t('toPage')}
-                  repo={t('toRepo')}
-                  subtitle={'usedSubtitle'}
-                  image={projects[project]['image']}
-                  title={projects[project]['name']}
-                  visible={showMore}
-                  key={idx}
-                />
-              )
-            }
-            return (
+          Object.keys(projects).map((project, idx) => (
               <ProjectCard
-                explanation={t(projects[project]['explanation'])}
-                page={t('toPage')}
-                repo={t('toRepo')}
-                subtitle={'usedSubtitle'}
-                image={projects[project]['image']}
                 title={projects[project]['name']}
-                visible={true}
+                image={projects[project]['image']}
+                explanation={t(projects[project]['explanation'])}
+                subtitle={t('usedSubtitle')}
+                technologies={projects[project]['technologies']}
+                page={t('toPage')}
+                toPage={projects[project]['pageLink']}
+                repo={t('toRepo')}
+                toRepo={projects[project]['repoLink']}
+                visible={idx > 2 ? showMore : true}
                 key={idx}
               />
             )
-          })
+          )
         }
       </div>
 
-      <button type='button' onClick={() => setShowMore(!showMore)}>Show more</button>
+      <PrimaryButton
+        action={ () => {setShowMore(!showMore)} }
+        text={'More Projects'}
+      />
     </div>
   )
 }

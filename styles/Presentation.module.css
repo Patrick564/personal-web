@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   width: 100%;
   align-items: center;
@@ -22,18 +22,8 @@
 }
 
 .more {
-  margin-top: 35px;
   color: #6366f1;
-  text-decoration: none;
-  border: 1px solid #6366f1;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-weight: bold;
-}
-
-.more:hover {
-  transform: scale(1.09);
-  box-shadow: 0 5px;
+  position: absolute;
+  margin-bottom: 50px;
+  bottom: 0;
 }

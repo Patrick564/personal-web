@@ -2,33 +2,45 @@ import Image from 'next/image'
 
 import style from './ProjectCard.module.css'
 
-const ProjectCard = ({ explanation, subtitle, page, repo, image, title, visible }) => {
+const ProjectCard = ({
+  title,
+  image,
+  explanation,
+  subtitle,
+  technologies,
+  page,
+  toPage,
+  repo,
+  toRepo,
+  visible
+}) => {
   return (
-    <div className={style.project} style={{ display: visible ? '' : 'none' }}>
+    <div className={style.card} style={{ display: visible ? '' : 'none' }}>
       <h3>{title}</h3>
 
       <Image
-        className={style.projectImg}
+        className={style.img}
         src={image}
         width={500}
         height={250}
-        alt='Planetarium project'
+        layout='intrinsic'
+        alt={title}
       />
 
-      <p className={style.projectExplanation}>
+      <p className={style.explanation}>
         {explanation}
       </p>
 
-      <div className={style.used}>
+      <div className={style.technologies}>
         <h4>{subtitle}</h4>
-        <p>JavaScript | React | Styled-Components | Docker</p>
+        <p>{technologies}</p>
       </div>
 
       <div className={style.links}>
-        <a className={style.link} href='https://planetarium-nasa-api.vercel.app' target='_blank'>
+        <a className={style.link} href={toPage} target='_blank'>
           {page}
         </a>
-        <a className={style.link} href='https://github.com/Patrick564/planetarium-nasa-api' target='_blank'>
+        <a className={style.link} href={toRepo} target='_blank'>
           {repo}
         </a>
       </div>
