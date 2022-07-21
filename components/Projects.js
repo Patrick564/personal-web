@@ -29,7 +29,7 @@ const projects = {
     image: '/contacts-calendar.webp',
     explanation: 'contactsCalendarExplanation',
     technologies: 'Django | Tailwind CSS | PostgreSQL | Docker',
-    pageLink: 'https://contacts-calendar.onrender.com',
+    pageLink: 'https://contacts-calendar.up.railway.app',
     repoLink: 'https://github.com/Patrick564/contacts_calendar'
   },
   photoGallery: {

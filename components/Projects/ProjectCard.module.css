@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  background-color: white;
+  background-color: #334155;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  color: black;
+  color: white;
   margin-top: 10px;
 }
 
@@ -43,7 +43,7 @@
   border: 1px solid rgba(50, 156, 248, 1);
   padding: 7px 15px;
   border-radius: 5px;
-  color: black;
+  color: white;
   box-shadow: 5px 5px rgba(50, 156, 248, 1);
   transition: all 0.15s ease-in-out;
 }
@@ -54,5 +54,5 @@
 }
 
 .link:visited {
-  color: black;
+  color: white;
 }
