@@ -10,7 +10,7 @@ import style from '../styles/Projects.module.css'
 const projects = {
   planetarium: {
     name: 'Planetarium (NASA API)',
-    image: '/planetarium.webp',
+    image: 'https://personal-images-serve.s3.us-east-2.amazonaws.com/planetarium.webp',
     explanation: 'planetariumExplanation',
     technologies: 'JavaScript | React | Styled-Components | Docker',
     pageLink: 'https://planetarium-nasa-api.vercel.app',
@@ -18,7 +18,7 @@ const projects = {
   },
   chatRoom: {
     name: 'Chat Room (Client)',
-    image: '/chat-room-client.webp',
+    image: 'https://personal-images-serve.s3.us-east-2.amazonaws.com/chat-room-client.webp',
     explanation: 'chatRoomExplanation',
     technologies: 'JavaScript | React | Styled-Components | Socket.io',
     pageLink: 'https://chat-room-client-psi.vercel.app',
@@ -26,7 +26,7 @@ const projects = {
   },
   contactsCalendar: {
     name: 'Contacts Calendar',
-    image: '/contacts-calendar.webp',
+    image: 'https://personal-images-serve.s3.us-east-2.amazonaws.com/contacts-calendar.webp',
     explanation: 'contactsCalendarExplanation',
     technologies: 'Django | Tailwind CSS | PostgreSQL | Docker',
     pageLink: 'https://contacts-calendar.onrender.com',
@@ -34,7 +34,7 @@ const projects = {
   },
   photoGallery: {
     name: 'Photo Gallery (AWS-S3)',
-    image: '/photo-gallery.webp',
+    image: 'https://personal-images-serve.s3.us-east-2.amazonaws.com/photo-gallery.webp',
     explanation: 'photoGalleryExplanation',
     technologies: 'Astro | React | Tailwind CSS',
     pageLink: 'https://aws-photo-gallery.netlify.app',
