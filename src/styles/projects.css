@@ -1,0 +1,15 @@
+.projects {
+  background-color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-wrapper {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}

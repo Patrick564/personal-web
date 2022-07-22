@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string
+  imgUrl: string
+  explanation: string
+  stack: string
+  liveUrl: string
+  repoUrl: string
+}
+
+const {
+  title,
+  imgUrl,
+  explanation,
+  stack,
+  liveUrl,
+  repoUrl
+} = Astro.props as Props
+---
+
+<div class="project-card">
+  <h3 class="title">{title}</h3>
+
+  <div class="img-wrapper">
+    <img class="img" src={imgUrl} alt="Project screenshot" />
+  </div>
+
+  <p class="explanation">{explanation}</p>
+  <span class="stack">{stack}</span>
+
+  <div class="links">
+    <a class="link" href={liveUrl}>Page</a>
+    <a class="link" href={repoUrl}>GitHub</a>
+  </div>
+</div>

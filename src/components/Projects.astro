@@ -1,0 +1,18 @@
+---
+import '../styles/projects.css'
+import '../styles/projectCard.css'
+
+import ProjectCard from './ProjectCard.astro'
+
+import projects from '../utils/projectList'
+---
+
+<section class="projects">
+  <div class="projects-wrapper">
+    <div class="projects-grid">
+      {
+        projects.map((project) => <ProjectCard {...project} />)
+      }
+    </div>
+  </div>
+</section>

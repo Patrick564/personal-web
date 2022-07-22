@@ -1,0 +1,27 @@
+.presentation {
+  background-color: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-wrapper {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.name {
+  text-align: center;
+}
+
+.description > p {
+  margin: 15px 0;
+}
+
+.resume {
+  text-align: center;
+}
