@@ -31,3 +31,10 @@
 .resume:visited {
   color: #1d4ed8;
 }
+
+#go-arrow {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  margin-bottom: 50px;
+}

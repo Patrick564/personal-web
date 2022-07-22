@@ -22,11 +22,11 @@ body {
   align-items: center;
 }
 
-.section:nth-child(odd) {
+.section:nth-child(even) {
   background-color: var(--main-bg-color);
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
   background-color: var(--secondary-bg-color);
 }
 
