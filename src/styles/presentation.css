@@ -11,6 +11,7 @@
   padding: 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 35px;
 }
 
@@ -20,8 +21,27 @@
 
 .description > p {
   margin: 15px 0;
+  max-width: 280px;
 }
 
 .resume {
   text-align: center;
+  text-decoration: none;
+  color: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  border-radius: 5px;
+  background-color: #1e293b;
+  /* width: 180px; */
+  padding: 15px;
+  box-shadow: 0 5px #1d4ed8;
+  transition: all 0.15s ease-in-out;
+}
+
+.resume:hover {
+  box-shadow: 0 0;
+  transform: translate(0, 5px);
+}
+
+.resume:visited {
+  color: #1d4ed8;
 }

@@ -1,11 +1,8 @@
 .projects-grid {
   display: flex;
-  /* flex-flow: column wrap; */
-  /* justify-content: center; */
   flex-wrap: wrap;
   justify-content: center;
   gap: 35px;
-  /* min-width: 250px; */
 }
 
 .project-card {
@@ -56,17 +53,17 @@
 
 .link {
   text-decoration: none;
-  border: 1px solid rgba(50, 156, 248, 1);
+  border: 1px solid #1d4ed8;
   padding: 7px 15px;
   border-radius: 5px;
   color: white;
-  box-shadow: 5px 5px rgba(50, 156, 248, 1);
+  box-shadow: 0 5px #1d4ed8;
   transition: all 0.15s ease-in-out;
 }
 
 .link:hover {
   box-shadow: 0 0;
-  transform: translate(5px, 5px);
+  transform: translate(0, 5px);
 }
 
 .link:visited {

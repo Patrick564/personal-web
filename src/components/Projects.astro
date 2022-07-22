@@ -4,11 +4,13 @@ import '../styles/projectCard.css'
 
 import ProjectCard from './ProjectCard.astro'
 
-import projects from '../utils/projectList'
+import projects from '../utils/projectsList'
 ---
 
 <section class="projects">
   <div class="projects-wrapper">
+    <h2 class="projects-title">Projects</h2>
+
     <div class="projects-grid">
       {
         projects.map((project) => <ProjectCard {...project} />)
