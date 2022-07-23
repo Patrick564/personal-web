@@ -1,0 +1,40 @@
+---
+export interface Props {
+  link: string
+  icon: string
+  title: string
+}
+
+const { link, icon, title } = Astro.props as Props
+---
+
+<a class="contact-link" href={link} target="_blank">
+  <i class={icon}></i>
+
+  {title}
+</a>
+
+<style>
+  .contact-link {
+    background-color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #1d4ed8;
+    border-radius: 5px;
+    max-width: 280px;
+    padding: 15px;
+    text-decoration: none;
+    color: aliceblue;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .contact-link:hover {
+    transform: scale(1.125);
+  }
+
+  .contact-link:visited {
+    color: aliceblue;
+  }
+</style>

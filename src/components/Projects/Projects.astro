@@ -1,10 +1,7 @@
 ---
-import '../styles/projects.css'
-import '../styles/projectCard.css'
-
 import ProjectCard from './ProjectCard.astro'
 
-import projects from '../utils/projectsList'
+import projects from '@utils/projectsList.js'
 ---
 
 <section class="section" id="projects">
@@ -18,3 +15,17 @@ import projects from '../utils/projectsList'
     </div>
   </div>
 </section>
+
+<style>
+  .projects-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+  }
+</style>

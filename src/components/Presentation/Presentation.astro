@@ -1,5 +1,5 @@
 ---
-import '../styles/presentation.css'
+
 ---
 
 <section class="section" id="presentation">
@@ -25,7 +25,41 @@ import '../styles/presentation.css'
       <span>Resume</span>
       <i class="fa-solid fa-download"></i>
     </a>
-
-    <i class="fa-solid fa-arrow-down fa-bounce fa-2x" id="go-arrow"></i>
   </div>
 </section>
+
+<style>
+  .name {
+    text-align: center;
+  }
+
+  .description > p {
+    margin: 15px 0;
+    max-width: 280px;
+  }
+
+  .resume {
+    text-align: center;
+    text-decoration: none;
+    color: #1d4ed8;
+    border: 1px solid #1d4ed8;
+    border-radius: 5px;
+    background-color: #1e293b;
+    padding: 15px;
+    box-shadow: 0 5px #1d4ed8;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .resume span {
+    margin-right: 5px;
+  }
+
+  .resume:hover {
+    box-shadow: 0 0;
+    transform: translate(0, 5px);
+  }
+
+  .resume:visited {
+    color: #1d4ed8;
+  }
+</style>

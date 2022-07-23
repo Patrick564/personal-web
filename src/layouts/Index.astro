@@ -1,6 +1,4 @@
 ---
-import '../styles/global.css'
-
 export interface Props {
   title: string
 }
@@ -25,3 +23,45 @@ const { title } = Astro.props as Props
   <script src="https://kit.fontawesome.com/21cd4ccf71.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<style is:global>
+  :root {
+    --main-bg-color: #0f172a;
+    --secondary-bg-color: #1e293b;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Roboto Slab', serif;
+    color: aliceblue;
+  }
+
+  .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section:nth-child(even) {
+    background-color: var(--main-bg-color);
+  }
+
+  .section:nth-child(odd) {
+    background-color: var(--secondary-bg-color);
+  }
+
+  .wrapper {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+</style>

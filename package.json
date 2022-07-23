@@ -8,5 +8,9 @@
   },
   "dependencies": {
     "astro": "1.0.0-beta.73"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "^0.4.1",
+    "svelte": "^3.46.4"
   }
 }
