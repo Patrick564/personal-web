@@ -22,15 +22,17 @@ const {
   <h3 class="title">{title}</h3>
 
   <div class="img-wrapper">
-    <img class="img" src={imgUrl} alt="Project screenshot" />
+    <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+      <img class="img" src={imgUrl} alt="Project screenshot" />
+    </a>
   </div>
 
   <p class="explanation">{explanation}</p>
   <span class="stack">{stack}</span>
 
   <div class="links">
-    <a class="link" href={liveUrl}>Page</a>
-    <a class="link" href={repoUrl}>GitHub</a>
+    <a class="link" href={liveUrl} rel="noopener noreferrer">Page</a>
+    <a class="link" href={repoUrl} rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -66,10 +68,12 @@ const {
   .explanation {
     max-width: 500px;
     max-height: 100px;
+    font-weight: 300;
   }
 
   .stack {
     font-weight: bold;
+    text-align: center;
   }
 
   .links {

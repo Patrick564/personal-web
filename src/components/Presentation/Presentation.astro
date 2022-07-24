@@ -5,19 +5,23 @@
 <section class="section" id="presentation">
   <div class="wrapper">
     <div class="name">
-      <h1>Hi, I'm Patrick Vilchez!</h1>
+      <h1>
+        <span>Hi, I'm</span>
+        <span>Patrick Vilchez!</span>
+      </h1>
 
-      <span>Web Backend/Frontend Developer</span>
+      <span>Web Backend Developer</span>
     </div>
 
     <div class="description">
-      <p>Frontend and Backend web developer.
-        I also know about relational and non-relational databases as MongoDB and PostgreSQL.
+      <p>
+        I am passionate about technology who enjoys learning and constantly facing new challenges.
       </p>
       <p>
-        I have knowledge in JavaScript, TailwindCSS, React, Python, Django, Flask, and ExpressJS.
-        I also have knowledge about Docker and AWS-S3.
-        I enjoy constantly learning and fecing new challenges.
+        I specialize in the backend using
+        <strong>Python</strong>, <strong>NodeJS</strong>, <strong>Django (DRF)</strong>, <strong>Express</strong> and <strong>Go</strong>
+        along with databases like <strong>PostgreSQL</strong> and <strong>MongoDB</strong> using <strong>Docker</strong>.
+        I'm also knowledgeable on the frontend with <strong>JavaScript</strong>, <strong>CSS</strong>, <strong>Tailwind CSS</strong>, and <strong>React</strong>.
       </p>
     </div>
 
@@ -31,11 +35,22 @@
 <style>
   .name {
     text-align: center;
+    /* font-size: 1.8em; */
+    font-size: 1.5em;
+  }
+
+  .name > h1 > span {
+    display: inline-block;
+  }
+
+  .name > span {
+    /* font-size: 1.5em; */
   }
 
   .description > p {
     margin: 15px 0;
-    max-width: 280px;
+    max-width: 350px;
+    font-weight: 300;
   }
 
   .resume {
