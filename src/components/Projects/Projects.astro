@@ -1,0 +1,33 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+import projects from '@utils/projectsList.js'
+---
+
+<section class="section" id="projects">
+  <div class="wrapper">
+    <h2>My projects</h2>
+
+    <div class="projects-grid">
+      {
+        projects.map((project) => <ProjectCard {...project} />)
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+</style>

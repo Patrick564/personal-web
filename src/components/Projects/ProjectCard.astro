@@ -1,0 +1,105 @@
+---
+export interface Props {
+  title: string
+  imgUrl: string
+  explanation: string
+  stack: string
+  liveUrl: string
+  repoUrl: string
+}
+
+const {
+  title,
+  imgUrl,
+  explanation,
+  stack,
+  liveUrl,
+  repoUrl
+} = Astro.props as Props
+---
+
+<div class="project-card">
+  <h3 class="title">{title}</h3>
+
+  <div class="img-wrapper">
+    <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+      <img class="img" src={imgUrl} alt="Project screenshot" />
+    </a>
+  </div>
+
+  <p class="explanation">{explanation}</p>
+  <span class="stack">{stack}</span>
+
+  <div class="links">
+    <a class="link" href={liveUrl} rel="noopener noreferrer">Page</a>
+    <a class="link" href={repoUrl} rel="noopener noreferrer">GitHub</a>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #334155;
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .img-wrapper {
+    align-self: center;
+    max-width: 500px;
+    max-height: 250px;
+  }
+
+  .img {
+    border-radius: 10px;
+    object-fit: fill;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .explanation {
+    max-width: 500px;
+    max-height: 100px;
+    font-weight: 300;
+  }
+
+  .stack {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+  }
+
+  .link {
+    text-decoration: none;
+    border: 1px solid #1d4ed8;
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 5px #1d4ed8;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .link:hover {
+    box-shadow: 0 0;
+    transform: translate(0, 5px);
+  }
+
+  .link:visited {
+    color: white;
+  }
+</style>
