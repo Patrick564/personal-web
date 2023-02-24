@@ -7,7 +7,7 @@ const contacts = [
   {
     link: 'https://linkedin.com/in/patrick-vilchez/',
     icon: 'fa-brands fa-linkedin fa-3x',
-    title: 'linkedin.com/in/patrick-vilchez',
+    title: '/in/patrick-vilchez',
   },
   {
     link: 'https://github.com/Patrick564',
